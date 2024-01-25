@@ -28,7 +28,3 @@ The dataset contains text message contents with tags indicating whether each mes
 ## Notes
 
 - The dataset is not provided; users should create their own list if they want to use the tool with a different dataset.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
