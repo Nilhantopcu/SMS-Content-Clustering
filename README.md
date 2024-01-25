@@ -1,27 +1,34 @@
-# SMS Clustering Tool
+# SMS Clustering with K-Means
 
-This Python tool is designed to evaluate the performance of the k-means clustering algorithm (with a k value of 2) as an unsupervised learning technique in correctly classifying short message (SMS) contents as either spam or ham (non-spam) messages. The project utilizes a dataset containing text messages sent and received by people living in English-speaking countries, where each message has a tag indicating whether it is perceived as a spam or ham message by the receiving person.
+This project is a tool for evaluating the ability of the k-means clustering algorithm to classify short message (SMS) contents as either spam or ham (non-spam) messages.
+
+## Dataset
+
+The dataset contains text message contents with tags indicating whether each message is spam or ham. The tool prepares a dataset file named `smsdata.txt` for clustering.
 
 ## Usage
 
-1. Add your data file named `SMSSpamCollection.txt` to the directory of your project.
-2. Run the project.
-3. First, a data file named `smsdata.txt` will be generated, and then the k-means clustering algorithm will be executed.
-4. The user will be prompted to enter the number of clusters they desire.
-5. Once the k-means clustering algorithm completes, the spam and ham message percentage values for each cluster will be displayed.
-6. The user will be asked if they want to rerun the algorithm.
+1. Run the `sms_clustering.py` script.
+2. Enter the number of clusters (k value) when prompted.
+3. View the clustering results, including the total number of messages and the spam and ham percentages in each cluster.
 
-## Requirements
+## Instructions
 
-- Python 3.x
-- scikit-learn (for KMeans)
-- NumPy
+- The program reads the data from the file and parses its contents.
+- The tool generates a dataset file (`smsdata.txt`) similar to the "blogdata.txt" file used in class.
+- Each row corresponds to a specific short message, and each column corresponds to a word.
+- Non-alphanumeric characters are removed, and unnecessary words are eliminated.
+- The category information (spam or ham) is not included in the output file.
 
-## Project Contents
+## Evaluation
 
-- `smsdata.txt`: The data file generated in the first step.
-- `SMSSpamCollection.txt`: Your initial data set file.
+- Ideally, all spam messages should be grouped in one cluster, and ham messages should be grouped in the other.
+- Displayed results show the total number of messages and spam and ham message percentages in each cluster.
 
-## K-Means Parameters
+## Notes
 
-The user can choose the number of clusters the k-means clustering algorithm will create.
+- The dataset is not provided; users should create their own list if they want to use the tool with a different dataset.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
